@@ -3,7 +3,7 @@ class ListNode:
         self.val = x
         self.next = None
 
-def printList(head: ListNode):
+def print_list(head: ListNode):
     while head:
         if head.next:
             print(head.val, end = " -> ")
@@ -11,7 +11,7 @@ def printList(head: ListNode):
             print(head.val)
         head = head.next
 
-def createList(linkedlist):
+def create_list(linkedlist):
     head = ListNode(linkedlist[0])
     head_copy = head
     for item in linkedlist[1:]:

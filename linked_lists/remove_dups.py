@@ -1,4 +1,4 @@
-from ListNode import ListNode, printList, createList
+from ListNode import ListNode, print_list, create_list
 
 def remove_dups(head: ListNode) -> ListNode:
     """
@@ -19,4 +19,4 @@ def remove_dups(head: ListNode) -> ListNode:
 
     return head
 
-printList(remove_dups(createList((3,3,6,4,4,5,6))))
+print_list(remove_dups(create_list((3,3,6,4,4,5,6))))
