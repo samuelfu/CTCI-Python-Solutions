@@ -5,5 +5,15 @@ class ListNode:
 
 def printList(head: ListNode):
     while head:
-        print(head.val)
+        print(head.val, end = " -> ")
         head = head.next
+    print("None")
+
+def createList(linkedlist):
+    head = ListNode(linkedlist[0])
+    head_copy = head
+    for item in linkedlist[1:]:
+        node = ListNode(item)
+        head.next = node
+        head = head.next
+    return head_copy

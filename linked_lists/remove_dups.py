@@ -1,4 +1,4 @@
-from ListNode import ListNode, printList
+from ListNode import ListNode, printList, createList
 
 def remove_dups(head: ListNode) -> ListNode:
     """
@@ -6,5 +6,5 @@ def remove_dups(head: ListNode) -> ListNode:
     How would you solve this problem if a temporary buffer is not allowed?
     """
 
-llist = ListNode(3)
+llist = createList((3,4,5,6))
 printList(llist)
