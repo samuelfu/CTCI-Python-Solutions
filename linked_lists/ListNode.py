@@ -5,9 +5,11 @@ class ListNode:
 
 def printList(head: ListNode):
     while head:
-        print(head.val, end = " -> ")
+        if head.next:
+            print(head.val, end = " -> ")
+        else:
+            print(head.val)
         head = head.next
-    print("None")
 
 def createList(linkedlist):
     head = ListNode(linkedlist[0])
