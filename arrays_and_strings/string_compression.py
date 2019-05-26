@@ -6,4 +6,16 @@ def string_compression(s):
     should return the original string. You can assume the string has only uppercase and
     lowercase letters (a-z)
     """
+    compressed = ""
+    x = 0
+    while x < len(s):
+        count = 0
+        c = s[x]
+        while x < len(s) and c == s[x]:
+            count += 1
+            x += 1
+        compressed += c + str(count)
 
+    return compressed if len(compressed) < len(s) else s
+
+print(string_compression("aabccccaaa"))

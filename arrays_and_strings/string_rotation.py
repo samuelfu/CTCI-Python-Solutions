@@ -6,3 +6,10 @@ def string_rotation(s1, s2):
     e.g., "waterbottle" is a rotation of "erbottlewat"
     """
 
+    for x in range(len(s2)):
+        if s2[x:] + s2[:x] == s1:
+            return True
+
+    return False
+
+print(string_rotation("waterbottle", "erbottlewat"))

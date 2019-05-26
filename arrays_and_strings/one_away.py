@@ -7,14 +7,23 @@ def one_away(s1, s2):
     if s1 == s2:
         return True
 
-    for x in range(len(s1)):
-        for y in range(len(s2)):
+    if len(s1) == len(s2):
+        count = 0
+        for x in range(len(s1)):
+            if s1[x] != s2[x]:
+                if count == 1:
+                    return False
+                count += 1
+        return True
+    elif len(s1) > len(s2):
+        for x in range(len(s1)):
             if s1[:x] + s1[x+1:] == s2:
                 return True
-            if s1[:x] + s1[x+1:] == s2[:y] + s2[y+1:]:
+    else:
+        for x in range(len(s2)):
+            if s2[:x] + s2[x+1:] == s1:
                 return True
-            if s1 == s2[:y] + s2[y+1:]:
-                return True
+
     return False
 
 print(one_away("pale", "ple"))
